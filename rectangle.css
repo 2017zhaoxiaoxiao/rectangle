@@ -1,16 +1,26 @@
 
-div{
-  width: 300px;
+.all{
+  font-size:1.1em;
   margin: 50px auto;
-  font-size: 1.1em;
+  width:400px;
 
 }
 #cal {
-  width: 70px;
   margin-left: 62px;
+  width:70px
 }
 input, label {
+  font-size: 1em;
   margin:5px 0;
   padding-left: 5px;
-  font-size: 1em;
 }
+span{
+  color:red;
+}
+#width-validation,
+#height-validation{
+  color:red;
+  margin-left: 62px;
+  font-size:0.8em;
+}
+
