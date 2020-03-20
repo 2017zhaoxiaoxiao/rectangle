@@ -5,6 +5,7 @@ $(function(){
       $btnCal = $('#cal'),
       $perimeter =$('#peri'),
       $area = $('#area');
+
   $forkMeGH.show('https://github.com/2017zhaoxiaoxiao/rectangle');
   $bszPageFooter.show('body');
   $btnCal.click(function(){
@@ -29,6 +30,7 @@ $(function(){
     //不能出现在前面，不能出现在空文本中，负号后面，科学计数法（e E）数字的末尾、前面、中间
     var pos =e.target.selectionStart,
         con=e.target.value;
+
     console.log(con);
     if(e.key==='e'){
       if(pos===0||con.indexOf('e')!==-1||con.indexOf('E')!==-1){
@@ -40,22 +42,27 @@ $(function(){
         return;
       }
     }
+
   });
   $height.keypress(function(e){
 
   });
-  //字段级校验
+  $height.keypress(function(e){
+
+  })
+ //字段级校验
   $width.focusout(function(){
     if(!validate('#width')){
       $width.select();
     }
+
   });
   $height.focusout(function(){
     if(!validate('#height')){
       $height.select();
     }
   });
-  function validate(p){
+   function validate(p){
     var data =$(p),
         l=data.attr('data-label'),
         msg=$(p+'-validation');
